@@ -8,8 +8,7 @@ const AppLayout = ({ children }) => {
         <UserProvider>
             <h1>App Layout</h1>
             <NavLink
-                aria-current="page"
-                to="/users"
+                to="users"
             >
                 Users list Page
             </NavLink>

@@ -8,7 +8,7 @@ const UsersList = ({ users }) => {
             {users.map(({_id: id}) => (
                 <li key={id}>
                     <NavLink
-                        to={`/users/${id}`}
+                        to={`${id}`}
                     >
                         User {id}
                     </NavLink>

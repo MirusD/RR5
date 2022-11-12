@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Redirect, useParams } from "react-router-dom"
+import { NavLink, useParams, Navigate } from "react-router-dom"
 import { useUser } from "../hooks/useUsers"
 
 const UserPage = () => {
@@ -7,7 +7,7 @@ const UserPage = () => {
     const { getUserById } = useUser()
     const user = getUserById(userId)
 
-    if(!user) return <Redirect to="/users" />
+    if(!user) return <Navigate to="/users" />
 
     return (
         <>

@@ -1,18 +1,16 @@
 import React from 'react'
-import PropTypes from "prop-types"
 import UsersList from "../components/usersList"
+import { useUser } from "../hooks/useUsers"
 
-const UsersListPage = ({ users }) => {
+const UsersListPage = () => {
+    const { users } = useUser()
+
     return (
         <>
             <h1>User List Page</h1>
             <UsersList users={ users }/>
         </>
     )
-}
-
-UsersListPage.propTypes = {
-    users: PropTypes.array
 }
 
 export default UsersListPage
